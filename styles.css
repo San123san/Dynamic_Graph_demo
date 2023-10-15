@@ -1,0 +1,44 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chart-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.chart-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribute charts evenly in a row */
+    gap: 20px;
+}
+
+
+.chart-name-label {
+    flex-basis: calc(33.33% - 20px); /* Set the basis width for each chart name label (3 labels per row) */
+    max-width: calc(33.33% - 20px); /* Set the maximum width for each chart name label (3 labels per row) */
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#btn{
+    background-color: #e7e7e7;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 15px;
+    font-family: monospace;
+    font-weight: 700;
+    border: none;
+}

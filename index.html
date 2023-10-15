@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Bar Charts</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Dynamic Bar Charts</h1>
+        <div class="chart-controls">
+            <div class="chart-name-input">
+                <input type="text" id="chartName" placeholder="Write Chart Name..." style="border-radius: 5px;
+                padding: 10px;
+                border: 1px solid gray;">
+                <button onclick="createChart()" id="btn">Create Chart</button>
+            </div>
+            <select id="selectChart" onchange="selectChart()" style="cursor: pointer; 
+            border: 1px solid gray;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: bolder; 
+            ">
+                <option value="" disabled selected>Select Chart</option>
+            </select>
+            <button onclick="deleteChart()" style="background-color: #e7e7e7;
+            color: black; cursor: pointer;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 10px;
+            font-size: 15px;
+            font-family: monospace;
+            font-weight: 700;
+            border: none;">Delete Chart</button>
+        </div>
+        <div class="input-container">
+            <div>
+                <input type="text" id="labelInput" placeholder="Label" style="border-radius: 5px;
+                padding: 10px;
+                border: 1px solid gray;">
+                <input type="number" id="valueInput" placeholder="Value" style="border-radius: 5px;
+                padding: 10px;
+                border: 1px solid gray;">
+                <button onclick="addDataToSelectedChart()" style="background-color: #e7e7e7;
+            color: black; cursor: pointer;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 10px;
+            font-size: 15px;
+            font-family: monospace;
+            font-weight: 700;
+            border: none;">Add Data</button>
+            </div>
+            <div style="padding-top: 8px;">
+                Note: Please select the chart for add value and delete chart.
+            </div>
+
+        </div>
+        <div class="chart-container" id="chartContainer">
+            <!-- Chart canvases will be added here dynamically -->
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
